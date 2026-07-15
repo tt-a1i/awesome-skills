@@ -1,4 +1,0 @@
-interface:
-  display_name: "Design Artifact"
-  short_description: "Build verified HTML artifacts and prototypes"
-  default_prompt: "Use $design-artifact to turn this brief into a polished, working HTML artifact and verify its primary interaction and responsive states."
