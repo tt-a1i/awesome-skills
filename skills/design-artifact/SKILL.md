@@ -7,6 +7,14 @@ description: Design, build, and verify distinctive one-off visual artifacts such
 
 Act as a designer who can ship the artifact, not as a style generator. Start from the user's context, establish a coherent visual system, build a complete local result, and verify it in the real rendering environment.
 
+## Preserve the output contract
+
+- Deliver the working artifact, not only a mood board, style description, or screenshot, unless the user explicitly requested exploration only.
+- Treat supplied copy, screenshots, code, tokens, specs, and handoffs as authoritative inputs. Do not re-interview the user for decisions those materials already contain.
+- Ask only when a missing decision would materially change scope, brand direction, interaction, or production integration. Otherwise state the assumption and continue.
+- Make the primary path usable and the decision-relevant states observable.
+- Keep content honest. Mark draft data and unfinished copy instead of presenting them as real product facts.
+
 ## Route the request
 
 - Use `create-html-deck` for a complete browser-native slide presentation.
@@ -26,6 +34,15 @@ Determine:
 - fidelity target and the decision the artifact should enable
 
 Ask only for missing information that would materially change the result. Skip questions for small continuations and obvious defaults. State consequential assumptions when proceeding without an answer.
+
+Turn the brief into a compact artifact contract before building:
+
+- one primary job
+- one target user or audience
+- one intended environment and viewport range
+- locked content and non-goals
+- primary interaction or decision
+- concrete completion and verification criteria
 
 ## Read context before designing
 
@@ -61,6 +78,16 @@ Use existing tokens when available. When inventing a system, keep the palette an
 - Motion study: make state transitions observable and controllable.
 
 Use plain HTML, CSS, and JavaScript for portable standalone artifacts. Use React only when state, interaction complexity, or the target repo makes it useful. Pin any remote dependency and avoid adding one for decoration alone.
+
+## Build in passes
+
+1. **Structure:** establish the semantic hierarchy, content order, responsive layout, and primary path without decorative polish.
+2. **System:** apply the chosen type, color, spacing, border, elevation, and motion vocabulary consistently.
+3. **States:** implement the default, interaction, loading, empty, error, and completion states that matter to the brief.
+4. **Polish:** refine line breaks, density, alignment, crops, focus treatment, and transitions at the actual target viewports.
+5. **Cleanup:** remove filler copy, dead controls, abandoned variants, unused dependencies, and console noise.
+
+Do not spend the polish pass compensating for a weak hierarchy. Fix structure first.
 
 ## Explore and consolidate
 
@@ -140,18 +167,25 @@ Use supplied imagery when possible. If real assets are unavailable, prefer stron
 Before delivery:
 
 1. Confirm the expected files exist and open from their final paths.
-2. Run available syntax, type, build, or static checks.
+2. For a standalone HTML artifact, run the bundled structural check:
+
+   ```bash
+   python3 <skill-dir>/scripts/check_artifact.py /absolute/path/to/artifact.html
+   ```
+
+   For repo work, run the project's syntax, type, build, test, and lint checks that cover the changed surface.
 3. Open the artifact in a browser and check console and page errors.
 4. Exercise the primary interaction and key states.
 5. Inspect screenshots at the intended viewport and at least one narrower viewport.
 6. Check local assets, focus visibility, overflow, text wrapping, and responsive behavior.
 7. Verify theme, variation, or reduced-motion modes when provided.
+8. Distinguish structural success from visual success. Record both instead of treating a passing build as visual approval.
 
 A passing build does not prove visual quality. Inspect the rendered composition. Never claim browser verification unless it actually happened.
 
 ## Deliver
 
-Report the exact artifact path, what it contains, the checks and viewports actually used, and any remaining caveat. Keep the handoff brief and lead with the result.
+Report the exact artifact path, what it contains, the checks and viewports actually used, and any remaining caveat or remote dependency. Keep the handoff brief and lead with the result.
 
 ## Attribution
 
