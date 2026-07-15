@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Artifact"
+  short_description: "Design polished one-off HTML artifacts and prototypes"
+  default_prompt: "Use $design-artifact to create a polished, distinctive HTML artifact from this brief."
