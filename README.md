@@ -11,7 +11,7 @@
 Skill 的代码、Issue、安装和后续更新以 [`github.com/awesome-skills`](https://github.com/awesome-skills) 组织下的独立仓库为准
 
 [![Organization](https://img.shields.io/badge/GitHub-awesome--skills-DCF23E?style=flat-square&labelColor=171717)](https://github.com/awesome-skills)
-[![Skills](https://img.shields.io/badge/featured_skills-2-F35B2A?style=flat-square&labelColor=171717)](#featured-skills)
+[![Skills](https://img.shields.io/badge/featured_skills-4-F35B2A?style=flat-square&labelColor=171717)](#featured-skills)
 
 </div>
 
@@ -21,6 +21,8 @@ Skill 的代码、Issue、安装和后续更新以 [`github.com/awesome-skills`]
 |---|---|---|
 | [**create-html-deck**](https://github.com/awesome-skills/create-html-deck) | 创建并验证适用于笔记本和投影的浏览器原生演示文稿 | `npx skills@latest add awesome-skills/create-html-deck -g -y` |
 | [**design-artifact**](https://github.com/awesome-skills/design-artifact) | 创建并验证高保真交互 HTML Artifact 与响应式原型 | `npx skills@latest add awesome-skills/design-artifact -g -y` |
+| [**align-goals**](https://github.com/awesome-skills/align-goals) | Briefly align on the user’s goal and current problem | `npx skills@latest add awesome-skills/align-goals -g -y` |
+| [**refine-web-design**](https://github.com/awesome-skills/refine-web-design) | Improve web design through bounded, evidence-based review | `npx skills@latest add awesome-skills/refine-web-design -g -y` |
 
 ## 两个 Skill 怎么选
 
@@ -45,4 +47,6 @@ Skill 的代码、Issue、安装和后续更新以 [`github.com/awesome-skills`]
 
 - [`awesome-skills/create-html-deck`](https://github.com/awesome-skills/create-html-deck)
 - [`awesome-skills/design-artifact`](https://github.com/awesome-skills/design-artifact)
+- [`awesome-skills/align-goals`](https://github.com/awesome-skills/align-goals)
+- [`awesome-skills/refine-web-design`](https://github.com/awesome-skills/refine-web-design)
 - [浏览 Awesome Skills 组织的全部仓库](https://github.com/awesome-skills)
